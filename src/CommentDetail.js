@@ -2,21 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const CommentDetail = (props) => {
+  const { id, author, text, avatar } = props;
+
   return (
-    <section>
+    <div key={id}>
       <div className="comment">
         <a href="/" className="avatar">
-          <img src={props.avatar} alt="avatar" />
+          <img src={avatar} alt="avatar" />
         </a>
         <div className="content">
-          <a href="/" className="author">{props.author}</a>
+          <a href="/" className="author">{author}</a>
           <div className="metadata">
-            <span className="date">{props.date}</span>
+            {/* <span className="date">{date}</span> */}
           </div>
-          <div className="text">{props.text}</div>
+          <div className="text">{text}</div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
