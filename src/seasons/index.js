@@ -29,17 +29,21 @@ class Seasons extends React.Component {
 
   render() {
     const { lat, long, errorMessage } = this.state;
-    if (errorMessage) {
+    if (errorMessage && !lat && !long) {
       return <h3>{errorMessage}</h3>
     }
 
-    return (
-      <div>
-        <h1>Seasons</h1>
-        <p>Latitude: {lat}</p>
-        <p>Longitude: {long}</p>
-      </div>
-    );
+    if (!errorMessage && lat && long) {
+      return (
+        <div>
+          <h1>Seasons</h1>
+          <p>Latitude: {lat}</p>
+          <p>Longitude: {long}</p>
+        </div>
+      )
+    }
+
+    return <h3>Loading!</h3>
   }
 }
 
