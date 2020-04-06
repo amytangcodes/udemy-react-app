@@ -1,29 +1,22 @@
 import React from 'react';
+import SeasonsDisplay from './SeasonsDisplay';
 
 class Seasons extends React.Component {
-  // very first function that will be called before anything else
-  // so a good place to intialize state
-  constructor(props) {
-    super(props);
+  state = {
+    lat: null,
+    long: null,
+    errorMessage: ""
+  }
 
-    this.state = {
-      lat: null,
-      long: null,
-      errorMessage: ""
-    }
-
+  componentDidMount() {
     window.navigator.geolocation.getCurrentPosition(
-      // a callback
       position => {
         this.setState({
           lat: position.coords.latitude,
           long: position.coords.longitude
         });
       },
-      // a failure callback
-      err => {
-        this.setState({ errorMessage: err.message });
-      }
+      err => this.setState({ errorMessage: err.message })
     );
   }
 
@@ -34,13 +27,7 @@ class Seasons extends React.Component {
     }
 
     if (!errorMessage && lat && long) {
-      return (
-        <div>
-          <h1>Seasons</h1>
-          <p>Latitude: {lat}</p>
-          <p>Longitude: {long}</p>
-        </div>
-      )
+      return <SeasonsDisplay lat={lat} long={long}/>
     }
 
     return <h3>Loading!</h3>
