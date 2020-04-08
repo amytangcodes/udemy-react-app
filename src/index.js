@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import Menu from './pageLayout/Menu';
+import "./Style.scss";
 
 const App = () => {
   return (
