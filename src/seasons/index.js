@@ -21,10 +21,10 @@ class Seasons extends React.Component {
     );
   }
 
-  render() {
+  renderContent() {
     const { lat, long, errorMessage } = this.state;
     if (errorMessage && !lat && !long) {
-      return <h3>{errorMessage}</h3>
+      return <h3>Error: {errorMessage}</h3>
     }
 
     if (!errorMessage && lat && long) {
@@ -32,6 +32,15 @@ class Seasons extends React.Component {
     }
 
     return <Spinner message="Please accept location request"/>
+  }
+
+  render() {
+    return (
+      <section className="container border red">
+        {this.renderContent()}
+      </section>
+    )
+
   }
 }
 

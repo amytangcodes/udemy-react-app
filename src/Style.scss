@@ -1,5 +1,13 @@
-.segment {
-  height: 99vh;
+.container {
+  height: 95vh;
+}
+
+.border {
+  border: 10px solid;
+
+  &.red {
+    color: red;
+  }
 }
 
 // --------------------------------------------------
