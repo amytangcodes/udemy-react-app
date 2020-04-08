@@ -1,5 +1,6 @@
 import React from 'react';
 import SeasonsDisplay from './SeasonsDisplay';
+import Spinner from './../utils/Spinner';
 
 class Seasons extends React.Component {
   state = {
@@ -30,7 +31,7 @@ class Seasons extends React.Component {
       return <SeasonsDisplay lat={lat} long={long}/>
     }
 
-    return <h3>Loading!</h3>
+    return <Spinner message="Please accept location request"/>
   }
 }
 
