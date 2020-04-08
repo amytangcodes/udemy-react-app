@@ -1,0 +1,47 @@
+.container {
+  height: 95vh;
+}
+
+.border {
+  border: 10px solid;
+
+  &.red {
+    color: red;
+  }
+}
+
+// --------------------------------------------------
+// SECTION 4 STYLING
+// --------------------------------------------------
+.season-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  &.winter {
+    background-color: aliceblue;
+    i {
+      color: blue;
+    }
+  }
+
+  &.summer {
+    background-color: #ffd700;
+    i {
+      color: red;
+    }
+  }
+
+  .icon-left {
+    position: absolute;
+    top: 85px;
+    left: 70px;
+  }
+
+  .icon-right {
+    position: absolute;
+    bottom: 85px;
+    right: 70px;
+  }
+}
