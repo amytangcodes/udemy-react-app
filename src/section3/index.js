@@ -1,13 +1,13 @@
 import React from 'react';
 import { data } from '../api/cardData';
+import Page from "../pageLayout/Page";
 import ApprovalCard from './ApprovalCard';
 import CommentDetail from './CommentDetail';
 
 const Section3 = () => {
 
   return (
-    <div>
-      <h1>Section 3</h1>
+    <Page heading="Section 3">
       <div className="ui container comments">
         {data.map(item => (
           <ApprovalCard>
@@ -25,7 +25,7 @@ const Section3 = () => {
           <p>We are just passing stuff into the child component</p>
         </ApprovalCard>
       </div>
-    </div>
+    </Page>
   );
 };
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import Page from "../pageLayout/Page";
 import SeasonsDisplay from './SeasonsDisplay';
 import Spinner from './../utils/Spinner';
 
@@ -36,9 +37,12 @@ class Seasons extends React.Component {
 
   render() {
     return (
-      <section className="container border red">
-        {this.renderContent()}
-      </section>
+      <Page heading="Seasons Component">
+        <div className="container border red">
+          {this.renderContent()}
+        </div>
+      </Page>
+
     )
 
   }
