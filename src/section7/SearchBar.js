@@ -5,11 +5,17 @@ class SearchBar extends Component {
     text: "WWW."
   }
 
+  onFormSubmit = (e) => {
+    e.preventDefault();  // do not want the form to automatically submit and rerender the page.
+
+    console.log(this.state.text);
+  }
+
   render() {
     const {text} = this.state;
     return (
       <div className="search-bar ui segment">
-        <form action="" className="ui form">
+        <form action="" className="ui form" onSubmit={this.onFormSubmit}>
           <div className="field">
             <label>Image Search</label>
             <input
