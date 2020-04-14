@@ -14,10 +14,11 @@ class SearchBar extends Component {
   }
 
   render() {
-    const { text} = this.state;
+    const { text } = this.state;
+    const { images } = this.props;
 
     return (
-      <div className="search-bar ui segment">
+      <div className="ui segment">
         <form action="" className="ui form" onSubmit={this.onFormSubmit}>
           <div className="field">
             <label>Image Search</label>
@@ -30,11 +31,8 @@ class SearchBar extends Component {
               })}
             />
           </div>
-          <div className="field">
-            <p>Your Image Search Result:</p>
-            <div>{text}</div>
-          </div>
         </form>
+        <p>Found: {images.length} images</p>
       </div>
     )
   }
