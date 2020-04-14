@@ -4,10 +4,11 @@ class ImageCard extends React.Component {
   constructor(props) {
     super(props)
 
-    this.imageRef = React.createRef();
     this.state = {
-      spans: null
+      spans: 0
     }
+
+    this.imageRef = React.createRef();
   }
 
   componentDidMount() {
