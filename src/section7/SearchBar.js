@@ -2,17 +2,20 @@ import React, { Component } from 'react'
 
 class SearchBar extends Component {
   state = {
-    text: "WWW."
+    text: ""
   }
 
   onFormSubmit = (e) => {
-    e.preventDefault();  // do not want the form to automatically submit and rerender the page.
+    const { text } = this.state;
+    const { onSubmit } = this.props;
 
-    console.log(this.state.text);
+    e.preventDefault();  // do not want the form to automatically submit and rerender the page.
+    onSubmit(text);
   }
 
   render() {
-    const {text} = this.state;
+    const { text} = this.state;
+
     return (
       <div className="search-bar ui segment">
         <form action="" className="ui form" onSubmit={this.onFormSubmit}>
@@ -20,7 +23,7 @@ class SearchBar extends Component {
             <label>Image Search</label>
             <input
               type="text"
-              placeholder="Search Bar"
+              placeholder="Search Your Image!"
               value={text}
               onChange={(e) => this.setState({
                 text: e.target.value.toUpperCase()
@@ -28,7 +31,8 @@ class SearchBar extends Component {
             />
           </div>
           <div className="field">
-            <p>Your input: <br/>{text}</p>
+            <p>Your Image Search Result:</p>
+            <div>{text}</div>
           </div>
         </form>
       </div>
