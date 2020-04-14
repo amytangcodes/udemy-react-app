@@ -1,39 +1,29 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Introduction
 
-# Starting the app
-`npm start`
+This is a repository of a collection of coding exercises from the Udemy React-Redux course which can be found here:
+https://www.udemy.com/course/react-redux/learn/lecture/12531304#overview
+
+## Run the App Locally!
+
+Clone the repository
+
+```bash
+git clone git@github.com:amytangcodes/udemy-react-app.git
+```
+
+Install Dependencies
+
+```bash
+npm install
+```
+
+Starting the app
+
+```bash
+npm start
+```
+
 Start the app at localhost:3000
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
 
 ## Available Scripts
 
