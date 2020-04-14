@@ -5,7 +5,7 @@ import Section7 from '../section7';
 import Seasons from '../seasons';
 
 const panes = [
-  { menuItem: 'Image Search Component', render: () => <Tab.Pane attached='bottom'><Section7 /></Tab.Pane> },
+  { menuItem: 'Image Gallery Component', render: () => <Tab.Pane attached='bottom'><Section7 /></Tab.Pane> },
   { menuItem: 'Seasons Component', render: () => <Tab.Pane attached='bottom'><Seasons /></Tab.Pane> },
   { menuItem: 'Section 3', render: () => <Tab.Pane attached='bottom'><Section3 /></Tab.Pane> }
 ]
