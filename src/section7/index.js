@@ -1,7 +1,8 @@
 import React from 'react';
-import axios from 'axios';
+import unsplash from '../api/unsplash'
 import Page from "../pageLayout/Page";
 import SearchBar from "./SearchBar";
+import ImageList from "./ImageList";
 
 class Section7 extends React.Component {
   state = {
@@ -9,11 +10,8 @@ class Section7 extends React.Component {
   }
 
   onSearchSubmit = async (text) => {
-    const response = await axios.get('https://api.unsplash.com/search/photos', {
-      params: { query: text },
-      headers: {
-        Authorization: 'Client-ID f7Ai5juTA6vfIYjMLfVE4lJ7PJyEBqqNuV-cQ_39Lw8'
-      }
+    const response = await unsplash.get('/search/photos', {
+      params: { query: text }
     });
 
     this.setState({
@@ -29,14 +27,8 @@ class Section7 extends React.Component {
         <div className="search-bar ui container">
           <SearchBar onSubmit={this.onSearchSubmit} images={images}/>
           <div className="results-container">
-            <h3 class="section-header">Image Search Results</h3>
-            <div className="ui grid">
-              {images.map(image => (
-                <div className="four wide column">
-                  <img src={image.urls.small} alt=""/>
-                </div>
-              ))}
-            </div>
+            <h3 className="section-header">Image Search Results</h3>
+            <ImageList images={images}/>
           </div>
         </div>
       </Page>
