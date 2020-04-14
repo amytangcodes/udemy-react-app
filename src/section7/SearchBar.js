@@ -10,6 +10,10 @@ class SearchBar extends Component {
     const { onSubmit } = this.props;
 
     e.preventDefault();  // do not want the form to automatically submit and rerender the page.
+
+    // Pass a callback from the parent to the child
+    // as a way to pass props from child
+    // back up to parent
     onSubmit(text);
   }
 

@@ -1,4 +1,8 @@
 .container {
+  height: 100vh;
+}
+
+.content-wrapper {
   height: 90vh;
 }
 
@@ -10,10 +14,23 @@
   }
 }
 
+.ui.segment,
+.ui.attached.segment {
+  border: none;
+}
+
+// --------------------------------------------------
+// SEASONS STYLING
+// --------------------------------------------------
+.ui.dimmer {
+  bottom: 0;
+}
+
 // --------------------------------------------------
 // SEASONS STYLING
 // --------------------------------------------------
 .season-display {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,11 +71,20 @@
     margin-top: 10px;
   }
 
-  img {
-    width: 100%;
-  }
-
   .section-header {
     margin-top: 30px;
+  }
+}
+
+.image-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 0 5px;
+  grid-auto-rows: 10px;
+}
+
+.image-card {
+  img {
+    width: 250px;
   }
 }
