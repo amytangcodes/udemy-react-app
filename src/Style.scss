@@ -11,7 +11,7 @@
 }
 
 // --------------------------------------------------
-// SECTION 4 STYLING
+// SEASONS STYLING
 // --------------------------------------------------
 .season-display {
   display: flex;
@@ -43,5 +43,22 @@
     position: absolute;
     bottom: 85px;
     right: 70px;
+  }
+}
+
+// --------------------------------------------------
+// SEARCH-BAR STYLING
+// --------------------------------------------------
+.search-bar {
+  p {
+    margin-top: 10px;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .section-header {
+    margin-top: 30px;
   }
 }

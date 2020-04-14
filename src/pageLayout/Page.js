@@ -5,9 +5,11 @@ const Page = (props) => {
 
   return (
     <section>
-      <h1>{heading}</h1>
-      <h3>{subheading}</h3>
-      <div className="content">{children}</div>
+      <div className="ui container">
+        <h1>{heading}</h1>
+        <p>{subheading}</p>
+        <div className="content">{children}</div>
+      </div>
     </section>
   );
 };
