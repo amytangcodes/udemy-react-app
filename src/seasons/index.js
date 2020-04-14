@@ -38,7 +38,7 @@ class Seasons extends React.Component {
   render() {
     return (
       <Page heading="Seasons Component">
-        <div className="container border red">
+        <div className="content-wrapper border red">
           {this.renderContent()}
         </div>
       </Page>
