@@ -5,13 +5,19 @@ class SearchBar extends Component {
     text: ""
   }
 
+  onInputChange = (e) => {
+    this.setState({
+      text: e.target.value.toUpperCase()
+    })
+  }
+
   onFormSubmit = (e) => {
     const { text } = this.state;
     const { onSubmit } = this.props;
 
     e.preventDefault();  // do not want the form to automatically submit and rerender the page.
 
-    // Pass a callback from the parent to the child
+    // Pass a callback from parent component
     // as a way to pass props from child
     // back up to parent
     onSubmit(text);
@@ -30,9 +36,7 @@ class SearchBar extends Component {
               type="text"
               placeholder="What are you looking for?"
               value={text}
-              onChange={(e) => this.setState({
-                text: e.target.value.toUpperCase()
-              })}
+              onChange={this.onInputChange}
             />
           </div>
         </form>

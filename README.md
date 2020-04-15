@@ -11,6 +11,7 @@ https://www.udemy.com/course/react-redux/learn/lecture/12531304#overview
 - [Projects](#projects)
   - [Seasons](#seasons)
   - [Image Gallery with Search](#image-gallery-with-search)
+  - [Video Page with Search](#video-page-with-search)
 - [Other Available Scripts](#other-available-scripts)
 
 ---
@@ -54,6 +55,10 @@ We grab the user's physical location using the Geolocation API to determine whet
 ### Image Gallery with Search
 
 In this project, we learn about handling user inputs with forms and events. We use Axios to connect to the Unsplash image API and learn about Async Await. We also use Grid CSS and Ref's for DOM access to create the gallery of images.
+
+### Video Page with Search
+
+Similar to the Image Gallery, this will be using the Youtube API to pull in a video detail section and as well as a component displaying a list of videos.
 
 ---
 
