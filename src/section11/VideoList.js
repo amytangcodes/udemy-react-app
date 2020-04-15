@@ -1,9 +1,18 @@
-import React from 'react'
+import React from 'react';
+import VideoItem from "./VideoItem";
 
-const VideoList = () => {
+const VideoList = (props) => {
+  const { resultItems } = props;
+
+  console.log({resultItems});
+  const videoList = resultItems.map((video, index) => <VideoItem video={video} key={index} />);
+
   return (
-    <div>
-      <h4>Video List</h4>
+    <div className="video-list">
+      <h3>Video List</h3>
+      <div className="ui items">
+        {videoList}
+      </div>
     </div>
   )
 }

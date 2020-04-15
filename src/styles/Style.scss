@@ -24,7 +24,6 @@
   flex-direction: row;
 
   & > div {
-    border: 1px dashed violet;
     &:first-child {
       width: 60%;
     }
@@ -92,6 +91,10 @@
   }
 }
 
+// --------------------------------------------------
+// IMAGE GALLERY STYLING
+// --------------------------------------------------
+
 .image-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -102,5 +105,19 @@
 .image-card {
   img {
     width: 250px;
+  }
+}
+
+// --------------------------------------------------
+// VIDEO APP STYLING
+// --------------------------------------------------
+.youtube-app {
+  .item {
+    padding: 5px !important;
+    border: 1px solid grey !important;
+  }
+
+  .description {
+    overflow-wrap: break-word;
   }
 }
