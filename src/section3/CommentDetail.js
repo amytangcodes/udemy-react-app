@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CommentDetail = (props) => {
-  const { id, author, text, avatar } = props;
-
+const CommentDetail = ({ id, author, text, avatar }) => {
   return (
     <div key={id}>
       <div className="comment">
