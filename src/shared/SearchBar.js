@@ -19,16 +19,16 @@ class SearchBar extends Component {
 
   render() {
     const { text } = this.state;
-    const { images } = this.props;
+    const { resultItems } = this.props;
 
     return (
-      <div className="ui segment">
+      <div className="search-bar ui segment">
         <form action="" className="ui form" onSubmit={this.onFormSubmit}>
           <div className="field">
-            <label>Image Search</label>
+            <label>Enter Your Search Term</label>
             <input
               type="text"
-              placeholder="Search Your Image!"
+              placeholder="What are you looking for?"
               value={text}
               onChange={(e) => this.setState({
                 text: e.target.value.toUpperCase()
@@ -36,7 +36,7 @@ class SearchBar extends Component {
             />
           </div>
         </form>
-        <p>Found: {images.length} images</p>
+        <p>Found: {resultItems.length} results</p>
       </div>
     )
   }

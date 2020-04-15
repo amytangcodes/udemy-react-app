@@ -11,7 +11,7 @@ https://www.udemy.com/course/react-redux/learn/lecture/12531304#overview
 - [Projects](#projects)
   - [Seasons](#seasons)
   - [Image Gallery with Search](#image-gallery-with-search)
-- [Other Available Scripts](#other)
+- [Other Available Scripts](#other-available-scripts)
 
 ---
 

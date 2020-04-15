@@ -2,9 +2,9 @@ import React from 'react';
 import ImageCard from "./ImageCard";
 
 const ImageList = props => {
-  const { images } = props;
+  const { resultItems } = props;
 
-  const imagesGrid = images.map(image => (
+  const imagesGrid = resultItems.map(image => (
     <ImageCard key={image.id} image={image} />
   ))
 

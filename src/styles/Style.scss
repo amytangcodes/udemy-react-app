@@ -19,6 +19,22 @@
   border: none;
 }
 
+.results-content {
+  display: flex;
+  flex-direction: row;
+
+  & > div {
+    border: 1px dashed violet;
+    &:first-child {
+      width: 60%;
+    }
+
+    &:last-child {
+      width: 40%;
+    }
+  }
+}
+
 // --------------------------------------------------
 // SEASONS STYLING
 // --------------------------------------------------

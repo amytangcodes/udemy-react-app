@@ -1,6 +1,6 @@
 import React from 'react';
 import { data } from '../api/cardData';
-import Page from "../pageLayout/Page";
+import Page from "../shared/Page";
 import ApprovalCard from './ApprovalCard';
 import CommentDetail from './CommentDetail';
 
