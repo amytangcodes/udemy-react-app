@@ -5,38 +5,42 @@ class SearchBar extends Component {
     text: ""
   }
 
+  onInputChange = (e) => {
+    this.setState({
+      text: e.target.value.toUpperCase()
+    })
+  }
+
   onFormSubmit = (e) => {
     const { text } = this.state;
-    const { onSubmit } = this.props;
+    const { onSearchSubmit } = this.props;
 
     e.preventDefault();  // do not want the form to automatically submit and rerender the page.
 
-    // Pass a callback from the parent to the child
+    // Pass a callback from parent component
     // as a way to pass props from child
     // back up to parent
-    onSubmit(text);
+    onSearchSubmit(text);
   }
 
   render() {
     const { text } = this.state;
-    const { images } = this.props;
+    const { resultItems } = this.props;
 
     return (
-      <div className="ui segment">
+      <div className="search-bar ui segment">
         <form action="" className="ui form" onSubmit={this.onFormSubmit}>
           <div className="field">
-            <label>Image Search</label>
+            <label>Enter Your Search Term</label>
             <input
               type="text"
-              placeholder="Search Your Image!"
+              placeholder="What are you looking for?"
               value={text}
-              onChange={(e) => this.setState({
-                text: e.target.value.toUpperCase()
-              })}
+              onChange={this.onInputChange}
             />
           </div>
         </form>
-        <p>Found: {images.length} images</p>
+        <p>Found: {resultItems.length} results</p>
       </div>
     )
   }

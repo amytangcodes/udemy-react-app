@@ -19,8 +19,7 @@ const getSeason = (lat, month) => {
   }
 }
 
-const SeasonsDisplay = props => {
-  const { lat } = props;
+const SeasonsDisplay = ({ lat }) => {
   const season = getSeason(lat, new Date().getMonth());
   const { text, iconName} = seasonConfig[season];
 

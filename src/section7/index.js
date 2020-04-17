@@ -1,12 +1,12 @@
 import React from 'react';
 import unsplash from '../api/unsplash'
-import Page from "../pageLayout/Page";
-import SearchBar from "./SearchBar";
+import Page from "../shared/Page";
+import SearchBar from "../shared/SearchBar";
 import ImageList from "./ImageList";
 
 class Section7 extends React.Component {
   state = {
-    images: []
+    resultItems: []
   }
 
   onSearchSubmit = async (text) => {
@@ -15,20 +15,20 @@ class Section7 extends React.Component {
     });
 
     this.setState({
-      images: response.data.results
+      resultItems: response.data.results
     });
   }
 
   render() {
-    const { images } = this.state;
+    const { resultItems } = this.state;
 
     return (
       <Page heading="Search Bar" subheading="Handling User Input with Forms and Events">
         <div className="search-bar ui container">
-          <SearchBar onSubmit={this.onSearchSubmit} images={images}/>
+          <SearchBar onSearchSubmit={this.onSearchSubmit} resultItems={resultItems}/>
           <div className="results-container">
             <h3 className="section-header">Image Search Results</h3>
-            <ImageList images={images}/>
+            <ImageList resultItems={resultItems}/>
           </div>
         </div>
       </Page>

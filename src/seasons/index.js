@@ -1,7 +1,7 @@
 import React from 'react';
-import Page from "../pageLayout/Page";
+import Page from "../shared/Page";
 import SeasonsDisplay from './SeasonsDisplay';
-import Spinner from './../utils/Spinner';
+import Spinner from './../shared/Spinner';
 
 class Seasons extends React.Component {
   state = {

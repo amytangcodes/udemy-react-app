@@ -19,6 +19,21 @@
   border: none;
 }
 
+.results-content {
+  display: flex;
+  flex-direction: row;
+
+  & > div {
+    &:first-child {
+      width: 60%;
+    }
+
+    &:last-child {
+      width: 40%;
+    }
+  }
+}
+
 // --------------------------------------------------
 // SEASONS STYLING
 // --------------------------------------------------
@@ -76,6 +91,10 @@
   }
 }
 
+// --------------------------------------------------
+// IMAGE GALLERY STYLING
+// --------------------------------------------------
+
 .image-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -86,5 +105,30 @@
 .image-card {
   img {
     width: 250px;
+  }
+}
+
+// --------------------------------------------------
+// VIDEO APP STYLING
+// --------------------------------------------------
+.youtube-app {
+  h3 {
+    margin-bottom: 1.5em;
+  }
+
+  .description {
+    overflow-wrap: break-word;
+  }
+
+  .content-container {
+    &:first-child {
+      padding-right: 20px;
+    }
+  }
+
+  .video-item {
+    cursor: pointer;
+    padding: 5px !important;
+    border: 1px solid lightgrey !important;
   }
 }

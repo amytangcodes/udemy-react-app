@@ -1,8 +1,6 @@
 import React from 'react';
 
-const Page = (props) => {
-  const {heading, subheading, children} = props;
-
+const Page = ({ heading, subheading, children }) => {
   return (
     <section>
       <div className="ui container">
