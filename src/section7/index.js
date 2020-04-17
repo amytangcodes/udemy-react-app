@@ -25,7 +25,7 @@ class Section7 extends React.Component {
     return (
       <Page heading="Search Bar" subheading="Handling User Input with Forms and Events">
         <div className="search-bar ui container">
-          <SearchBar onSubmit={this.onSearchSubmit} resultItems={resultItems}/>
+          <SearchBar onSearchSubmit={this.onSearchSubmit} resultItems={resultItems}/>
           <div className="results-container">
             <h3 className="section-header">Image Search Results</h3>
             <ImageList resultItems={resultItems}/>

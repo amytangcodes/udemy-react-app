@@ -112,12 +112,26 @@
 // VIDEO APP STYLING
 // --------------------------------------------------
 .youtube-app {
-  .item {
-    padding: 5px !important;
-    border: 1px solid grey !important;
+  h3 {
+    margin-bottom: 1.5em;
   }
 
   .description {
     overflow-wrap: break-word;
+  }
+
+  .content-container {
+    &:first-child {
+      padding-right: 20px;
+    }
+  }
+
+  .video-item {
+    cursor: pointer;
+    padding: 5px !important;
+    border: 1px solid lightgrey !important;
+  }
+
+  .video-detail {
   }
 }

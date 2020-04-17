@@ -5,39 +5,46 @@ import SearchBar from "../shared/SearchBar";
 import VideoDetail from "./VideoDetail";
 import VideoList from "./VideoList";
 
-const KEY = 'AIzaSyDacXP9knVFt5UF_zRU7b9OwKwseO8HM6Q'
 class index extends React.Component {
   state = {
-    resultItems: []
+    resultItems: [],
+    selectedVideo: null
+  }
+
+  componentDidMount() {
+    this.onSearchSubmit('comedy');
   }
 
   onSearchSubmit = async (text) => {
     const response = await youtube.get('/search', {
       params: {
-        q: text,
-        part: "snippet",
-        maxResults: 5,
-        key: KEY
+        q: text
       }
     })
 
     this.setState({
-      resultItems: response.data.items
+      resultItems: response.data.items,
+      selectedVideo: response.data.items[0]
+    })
+  }
+
+  onVideoSelect = video => {
+    this.setState({
+      selectedVideo: video
     })
   }
 
   render() {
-    const { resultItems } = this.state;
+    const { resultItems, selectedVideo } = this.state;
 
     return (
       <Page heading="Youtube App">
         <div className="youtube-app ui container">
-          <SearchBar onSubmit={this.onSearchSubmit} resultItems={resultItems} />
-          <div className="results-container">
-            <h3>Video Search Results</h3>
-            <div className="results-content">
-              <VideoDetail resultItems={resultItems}/>
-              <VideoList resultItems={resultItems}/>
+          <SearchBar onSearchSubmit={this.onSearchSubmit} resultItems={resultItems} />
+          <div className="ui grid">
+            <div className="ui row">
+              <VideoDetail selectedVideo={selectedVideo}/>
+              <VideoList resultItems={resultItems} onVideoSelect={this.onVideoSelect}/>
             </div>
           </div>
         </div>

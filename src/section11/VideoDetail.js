@@ -1,11 +1,29 @@
-import React from 'react'
+import React from 'react';
 
-const VideoDetail = () => {
+const VideoDetail = ({ selectedVideo }) => {
+  if (!selectedVideo) {
+    return <div className="eleven wide column">Loading</div>
+  }
+
+  const src = `https://www.youtube.com/embed/${selectedVideo.id.videoId}`
+
   return (
-    <div>
-      <h3>Video Detail</h3>
+    <div className="eleven wide column">
+      <div className="ui embed">
+        <iframe
+          src={src}
+          title="videoplayer"
+        />
+      </div>
+      <div className="ui segment">
+        <h4 className="ui header">{selectedVideo.snippet.title}</h4>
+        <p className="description">{selectedVideo.snippet.description}</p>
+      </div>
     </div>
   )
 }
 
 export default VideoDetail;
+
+
+// Spinner message="Loading..."/>
