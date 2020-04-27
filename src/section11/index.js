@@ -12,7 +12,7 @@ class index extends React.Component {
   }
 
   componentDidMount() {
-    this.onSearchSubmit('comedy');
+    this.onSearchSubmit('stand up');
   }
 
   onSearchSubmit = async (text) => {
@@ -43,8 +43,8 @@ class index extends React.Component {
           <SearchBar onSearchSubmit={this.onSearchSubmit} resultItems={resultItems} />
           <div className="ui grid">
             <div className="ui row">
-              <VideoDetail selectedVideo={selectedVideo}/>
-              <VideoList resultItems={resultItems} onVideoSelect={this.onVideoSelect}/>
+              <VideoDetail selectedVideo={selectedVideo} />
+              <VideoList resultItems={resultItems} onVideoSelect={this.onVideoSelect} />
             </div>
           </div>
         </div>
