@@ -3,7 +3,7 @@ import Page from "../shared/Page";
 import SeasonsDisplay from './SeasonsDisplay';
 import Spinner from './../shared/Spinner';
 
-class Seasons extends React.Component {
+class Project02 extends React.Component {
   state = {
     lat: null,
     long: null,
@@ -29,10 +29,10 @@ class Seasons extends React.Component {
     }
 
     if (!errorMessage && lat && long) {
-      return <SeasonsDisplay lat={lat} long={long}/>
+      return <SeasonsDisplay lat={lat} long={long} />
     }
 
-    return <Spinner message="Please accept location request"/>
+    return <Spinner message="Please accept location request" />
   }
 
   render() {
@@ -48,4 +48,4 @@ class Seasons extends React.Component {
   }
 }
 
-export default Seasons;
+export default Project02;

@@ -4,7 +4,7 @@ import Page from "../shared/Page";
 import SearchBar from "../shared/SearchBar";
 import ImageList from "./ImageList";
 
-class Section7 extends React.Component {
+class Project03 extends React.Component {
   state = {
     resultItems: []
   }
@@ -23,12 +23,12 @@ class Section7 extends React.Component {
     const { resultItems } = this.state;
 
     return (
-      <Page heading="Search Bar" subheading="Handling User Input with Forms and Events">
+      <Page heading="Image Gallery" subheading="Handling User Input with Forms and Events">
         <div className="search-bar ui container">
-          <SearchBar onSearchSubmit={this.onSearchSubmit} resultItems={resultItems}/>
+          <SearchBar onSearchSubmit={this.onSearchSubmit} resultItems={resultItems} />
           <div className="results-container">
             <h3 className="section-header">Image Search Results</h3>
-            <ImageList resultItems={resultItems}/>
+            <ImageList resultItems={resultItems} />
           </div>
         </div>
       </Page>
@@ -36,4 +36,4 @@ class Section7 extends React.Component {
   }
 };
 
-export default Section7;
+export default Project03;

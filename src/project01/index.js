@@ -4,15 +4,14 @@ import Page from "../shared/Page";
 import ApprovalCard from './ApprovalCard';
 import CommentDetail from './CommentDetail';
 
-const Section3 = () => {
+const Project01 = () => {
 
   return (
-    <Page heading="Section 3">
+    <Page heading="Project 1">
       <div className="ui container comments">
         {data.map(item => (
-          <ApprovalCard>
+          <ApprovalCard key={item.id}>
             <CommentDetail
-              key={item.id}
               author={item.author}
               date={item.date}
               text={item.text}
@@ -29,4 +28,4 @@ const Section3 = () => {
   );
 };
 
-export default Section3;
+export default Project01;
