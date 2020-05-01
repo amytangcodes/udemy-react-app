@@ -23,8 +23,8 @@ class Project03 extends React.Component {
     const { resultItems } = this.state;
 
     return (
-      <Page heading="Image Gallery" subheading="Handling User Input with Forms and Events">
-        <div className="search-bar ui container">
+      <Page heading="Image Gallery" subheading="Handling User Input with Forms and Events" classname="search-bar">
+        <div className="ui container">
           <SearchBar onSearchSubmit={this.onSearchSubmit} resultItems={resultItems} />
           <div className="results-container">
             <h3 className="section-header">Image Search Results</h3>
