@@ -2,15 +2,18 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import Page from "../shared/Page";
 import ToDoForm from './ToDoForm';
-// import TodoList from './TodoList';
-// import useTodoState from './useTodoState';
-import './styles.scss';
+import ToDoList from './ToDoList';
+import useToDoState from './useToDoState';
 
 const Index = () => {
-  // const { todos, addTodo, deleteTodo } = useTodoState([]);
+  const { toDos, addToDo, deleteToDo } = useToDoState([]);
 
-  const saveToDo = value => {
-    console.log({ value });
+  const handleSaveToDo = toDoText => {
+    const trimmedValue = toDoText.trim();
+
+    if (trimmedValue.length > 0) {
+      addToDo(trimmedValue);
+    }
   }
 
   return (
@@ -20,14 +23,9 @@ const Index = () => {
           Todos
         </Typography>
 
-        <ToDoForm
-          saveToDo={saveToDo}
-        />
-
-        {/* <TodoList todos={todos} deleteTodo={deleteTodo} /> */}
+        <ToDoForm saveToDo={handleSaveToDo} />
+        <ToDoList toDos={toDos} deleteToDo={deleteToDo} />
       </div>
-
-
     </Page>
   );
 };

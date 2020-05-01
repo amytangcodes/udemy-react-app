@@ -1,5 +1,6 @@
 import React from 'react';
 import { Tab } from 'semantic-ui-react';
+
 import Project01 from '../project01';
 import Project02 from '../project02';
 import Project03 from '../project03';
@@ -14,4 +15,4 @@ const panes = [
   { menuItem: 'User Cards', render: () => <Tab.Pane attached='bottom'><Project01 /></Tab.Pane> }
 ]
 
-export default () => <Tab menu={{ attached: 'top' }} panes={panes} />
+export default () => <Tab menu={{ borderless: true, vertical: true, fluid: true, attached: 'top' }} panes={panes} />
