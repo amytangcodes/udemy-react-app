@@ -38,8 +38,8 @@ class index extends React.Component {
     const { resultItems, selectedVideo } = this.state;
 
     return (
-      <Page heading="Youtube App">
-        <div className="youtube-app ui container">
+      <Page heading="Youtube App" classname="youtube-app">
+        <div className="ui container">
           <SearchBar onSearchSubmit={this.onSearchSubmit} resultItems={resultItems} />
           <div className="ui grid">
             <div className="ui row">

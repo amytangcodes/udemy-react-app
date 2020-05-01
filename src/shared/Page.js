@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Page = ({ heading, subheading, children }) => {
+const Page = ({ heading, subheading, children, classname }) => {
   return (
-    <section>
+    <section className={classname}>
       <div className="ui container">
         <h1>{heading}</h1>
         <p>{subheading}</p>
