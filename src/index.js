@@ -1,17 +1,15 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import Menu from './shared/Menu';
-import Footer from './shared/Footer';
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+
+import App from "./shared/App";
+import reducers from "./project06/reducers"
 import "./styles/Style.scss";
 
-const App = () => {
-  return (
-    <Fragment>
-      <Menu />
-      <Footer />
-    </Fragment>
-  );
-};
-
-// Take that component and show on the screen
-ReactDOM.render(<App />, document.querySelector("#root"));
+ReactDOM.render(
+  <Provider store={createStore(reducers)}>
+    <App />
+  </Provider>,
+  document.querySelector("#root")
+);
