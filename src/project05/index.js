@@ -1,6 +1,6 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
 import Page from "../shared/Page";
+import Typography from '@material-ui/core/Typography';
 import ToDoForm from './ToDoForm';
 import ToDoList from './ToDoList';
 import useToDoState from './useToDoState';
