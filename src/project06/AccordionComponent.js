@@ -1,23 +1,28 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import { Accordion, Icon } from "semantic-ui-react";
 
 const AccordionComponent = ({ items }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const handleClick = ({ activeIndex }) => {
-    console.log({ activeIndex });
+  const handleClick = (index) => {
+    console.log({ index });
   };
 
-  const renderedItems = items.map((i) => {
+  const renderedItems = items.map((i, index) => {
     return (
-      <Accordion.Title
-        active={activeIndex === i.index}
-        index={i.index}
-        // onClick={handleClick}
-      >
-        <Icon name="dropdown" />
-        {i.title}
-      </Accordion.Title>
+      <Fragment key={index}>
+        <Accordion.Title
+          // active={activeIndex === index}
+          index={index}
+          onClick={() => handleClick(index)}
+        >
+          <Icon name="dropdown" />
+          {index} {i.title}
+        </Accordion.Title>
+        <Accordion.Content active={activeIndex === index}>
+          <p>{i.content}</p>
+        </Accordion.Content>
+      </Fragment>
     );
   });
 
