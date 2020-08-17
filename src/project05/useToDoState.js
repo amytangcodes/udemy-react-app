@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from "react";
 
 export default (initialValue) => {
   const [toDos, setToDos] = useState(initialValue);
@@ -10,7 +10,7 @@ export default (initialValue) => {
     },
     deleteToDo: (toDoIndex) => {
       const newToDos = toDos.filter((_, index) => index !== toDoIndex);
-      setToDos(newToDos)
-    }
-  }
-}
+      setToDos(newToDos);
+    },
+  };
+};
