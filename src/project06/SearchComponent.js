@@ -31,8 +31,13 @@ const SearchComponent = () => {
     return (
       <List.Item key={result.pageid}>
         <List.Content>
-          <List.Header as="a">{result.title}</List.Header>
-          <List.Description as="a">
+          <List.Header
+            as="a"
+            href={`https://en.wikipedia.org?curid=${result.pageid}`}
+          >
+            {result.title}
+          </List.Header>
+          <List.Description>
             <span dangerouslySetInnerHTML={{ __html: result.snippet }}></span>
           </List.Description>
         </List.Content>
