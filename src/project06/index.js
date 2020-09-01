@@ -1,6 +1,7 @@
 import React from "react";
 import Page from "../shared/Page";
 import AccordionComponent from "./AccordionComponent";
+import SearchComponent from "./SearchComponent";
 
 const items = [
   {
@@ -20,6 +21,7 @@ const items = [
 const Index = () => {
   return (
     <Page heading="React Hooks | Widgets App">
+      <SearchComponent />
       <AccordionComponent items={items} />
     </Page>
   );
