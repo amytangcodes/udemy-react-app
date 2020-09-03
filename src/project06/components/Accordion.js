@@ -28,7 +28,7 @@ const AccordionComponent = ({ items }) => {
   });
 
   return (
-    <div>
+    <div className="section-block">
       <h2>Accordion Widget</h2>
       <Accordion>{renderedItems}</Accordion>
     </div>

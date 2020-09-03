@@ -1,28 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import Page from "../shared/Page";
-import AccordionComponent from "./AccordionComponent";
-import SearchComponent from "./SearchComponent";
-
-const items = [
-  {
-    title: "What is React?",
-    content: "A JavaScript library for building user interfaces",
-  },
-  {
-    title: "Why use React?",
-    content: "React is a fav JS library amongst engineers.",
-  },
-  {
-    title: "How do you use React?",
-    content: "You use React by creating components.",
-  },
-];
+import { dropdownData, accordianData } from "../api/projectSixData";
+import AccordionComponent from "./components/Accordion";
+import SearchComponent from "./components/Search";
+import DropdownComponent from "./components/Dropdown";
 
 const Index = () => {
+  const [selected, setSelected] = useState(dropdownData[0]);
+
   return (
     <Page heading="React Hooks | Widgets App">
+      <DropdownComponent
+        selected={selected}
+        onSelectedChange={setSelected}
+        data={dropdownData}
+        initialText="Select Color"
+      />
       <SearchComponent />
-      <AccordionComponent items={items} />
+      <AccordionComponent items={accordianData} />
     </Page>
   );
 };
