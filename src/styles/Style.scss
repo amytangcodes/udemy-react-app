@@ -38,6 +38,7 @@ footer {
 .section-block {
   padding-top: 3em;
   padding-bottom: 3em;
+  border-bottom: 1px solid lightgray;
 }
 
 .column {
@@ -80,10 +81,12 @@ footer {
   border-radius: 0 !important;
 }
 
-.menu {
-  border-top: none !important;
-  min-height: 100% !important;
-  height: 100vh;
+.main-section {
+  .menu:first-child {
+    border-top: none !important;
+    min-height: 100% !important;
+    height: 100vh;
+  }
 }
 
 // --------------------------------------------------

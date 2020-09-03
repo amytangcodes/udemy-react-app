@@ -61,6 +61,7 @@ const panes = [
 
 export default () => (
   <Tab
+    className="main-section"
     menu={{ borderless: true, vertical: true, fluid: true, attached: "top" }}
     panes={panes}
   />
