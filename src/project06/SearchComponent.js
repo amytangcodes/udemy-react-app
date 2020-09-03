@@ -4,8 +4,19 @@ import axios from "axios";
 
 const SearchComponent = () => {
   const [term, setTerm] = useState("");
+  const [debouncedTerm, setDebouncedTerm] = useState(term);
   const [results, setResults] = useState([]);
   console.log(results);
+
+  useEffect(() => {
+    const timerId = setTimeout(() => {
+      setDebouncedTerm(term);
+    }, 1000);
+
+    return () => {
+      clearTimeout(timerId);
+    };
+  }, [term]);
 
   useEffect(() => {
     const search = async () => {
@@ -15,17 +26,16 @@ const SearchComponent = () => {
           list: "search",
           origin: "*",
           format: "json",
-          srsearch: term,
+          srsearch: debouncedTerm,
         },
       });
       setResults(data.query.search);
     };
 
-    // if term is empty and you don't want to get wiki api error:
-    if (term) {
+    if (debouncedTerm) {
       search();
     }
-  }, [term]);
+  }, [debouncedTerm]);
 
   const renderedResults = results.map((result) => {
     return (
