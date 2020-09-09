@@ -1,7 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const DropdownComponent = ({ data, selected, onSelectedChange }) => {
   const [open, setOpen] = useState(false);
+  const ref = useRef();
+
+  useEffect(() => {
+    const onBodyClick = (evt) => {
+      // console.log(evt.target);
+      if (ref.current.contains(evt.target)) {
+        return;
+      }
+      setOpen(false);
+    };
+
+    document.body.addEventListener("click", onBodyClick);
+
+    return () => {
+      document.body.removeEventListener("click", onBodyClick);
+    };
+  }, []);
 
   const dropdownItems = data.map((dropdownItem) => {
     if (dropdownItem.value === selected.value) {
@@ -22,7 +39,7 @@ const DropdownComponent = ({ data, selected, onSelectedChange }) => {
   return (
     <div className="section-block">
       <h2>Dropdown Widget</h2>
-      <div className="ui form">
+      <div ref={ref} className="ui form">
         <div className="field">
           <label className="labe">Select a Color</label>
           <div
