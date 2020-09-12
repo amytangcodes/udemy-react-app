@@ -38,7 +38,6 @@ footer {
 .section-block {
   padding-top: 3em;
   padding-bottom: 3em;
-  border-bottom: 1px solid lightgray;
 }
 
 .column {
@@ -85,6 +84,8 @@ footer {
   .menu:first-child {
     border-top: none !important;
     min-height: 100% !important;
+  }
+  .menu.vertical {
     height: 100vh;
   }
 }
