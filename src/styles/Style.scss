@@ -205,3 +205,16 @@ footer {
 // --------------------------------------------------
 // REACT HOOKS | WIDGET APP STYLING
 // --------------------------------------------------
+.text-content {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  .text-red {
+    color: red;
+  }
+  .text-blue {
+    color: blue;
+  }
+  .text-green {
+    color: green;
+  }
+}

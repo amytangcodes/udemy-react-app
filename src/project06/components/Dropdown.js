@@ -54,6 +54,11 @@ const DropdownComponent = ({ data, selected, onSelectedChange }) => {
           </div>
         </div>
       </div>
+      <div className="text-content">
+        <p
+          className={`text-${selected.value}`}
+        >{`This text is ${selected.value}`}</p>
+      </div>
     </div>
   );
 };
