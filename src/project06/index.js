@@ -16,6 +16,9 @@ const Index = () => {
       render: () => {
         return (
           <Tab.Pane>
+            <Button onClick={() => setShowDropdown(!showDropdown)}>
+              Toggle Dropdown
+            </Button>
             {showDropdown ? (
               <DropdownComponent
                 selected={selected}
@@ -24,9 +27,6 @@ const Index = () => {
                 initialText="Select Color"
               />
             ) : null}
-            <Button onClick={() => setShowDropdown(!showDropdown)}>
-              Toggle Dropdown
-            </Button>
           </Tab.Pane>
         );
       },
@@ -43,7 +43,7 @@ const Index = () => {
       menuItem: "Accordian",
       render: () => (
         <Tab.Pane>
-          <AccordionComponent items={accordianData} />;
+          <AccordionComponent items={accordianData} />
         </Tab.Pane>
       ),
     },

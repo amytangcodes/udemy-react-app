@@ -15,15 +15,15 @@ export const accordianData = [
 
 export const dropdownData = [
   {
-    label: "The Color Red",
+    label: "Red Text",
     value: "red",
   },
   {
-    label: "The Color Green",
+    label: "Green Text",
     value: "green",
   },
   {
-    label: "A Shade of Blue",
+    label: "Blue Text",
     value: "blue",
   },
 ];

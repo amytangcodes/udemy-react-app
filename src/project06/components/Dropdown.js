@@ -41,7 +41,7 @@ const DropdownComponent = ({ data, selected, onSelectedChange }) => {
       <h2>Dropdown Widget</h2>
       <div ref={ref} className="ui form">
         <div className="field">
-          <label className="labe">Select a Color</label>
+          <label className="labe">Select a color to change the text</label>
           <div
             onClick={() => setOpen(!open)}
             className={`ui selection dropdown ${open ? "visible active" : ""}`}
