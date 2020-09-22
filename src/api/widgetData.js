@@ -14,16 +14,13 @@ export const accordianData = [
 ];
 
 export const dropdownData = [
-  {
-    label: "Red Text",
-    value: "red",
-  },
-  {
-    label: "Green Text",
-    value: "green",
-  },
-  {
-    label: "Blue Text",
-    value: "blue",
-  },
+  { label: "Red Text", value: "red" },
+  { label: "Green Text", value: "green" },
+  { label: "Blue Text", value: "blue" },
+];
+
+export const translateData = [
+  { label: "Afrikaans", value: "af" },
+  { label: "Arabic", value: "ar" },
+  { label: "Hindi", value: "hi" },
 ];

@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from "react";
+import SectionHeader from "../../shared/SectionHeader";
 import { Accordion, Icon } from "semantic-ui-react";
 
 const AccordionComponent = ({ items }) => {
@@ -11,7 +12,7 @@ const AccordionComponent = ({ items }) => {
   const renderedItems = items.map((item, index) => {
     // const active = index === activeIndex ? "active" : "";
     return (
-      <Fragment key={index}>
+      <div key={index}>
         <Accordion.Title
           active={activeIndex === index}
           index={index}
@@ -23,15 +24,15 @@ const AccordionComponent = ({ items }) => {
         <Accordion.Content active={activeIndex === index}>
           <p>{item.content}</p>
         </Accordion.Content>
-      </Fragment>
+      </div>
     );
   });
 
   return (
-    <div className="section-block">
-      <h2>Accordion Widget</h2>
+    <Fragment>
+      <SectionHeader pageHeading="Accordion Widget" />
       <Accordion>{renderedItems}</Accordion>
-    </div>
+    </Fragment>
   );
 };
 

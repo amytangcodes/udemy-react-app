@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, Fragment } from "react";
 
-const DropdownComponent = ({ data, selected, onSelectedChange }) => {
+const DropdownComponent = ({ data, selected, onSelectedChange, header }) => {
   const [open, setOpen] = useState(false);
   const ref = useRef();
 
@@ -37,29 +37,26 @@ const DropdownComponent = ({ data, selected, onSelectedChange }) => {
   });
 
   return (
-    <div className="section-block">
-      <h2>Dropdown Widget</h2>
-      <div ref={ref} className="ui form">
-        <div className="field">
-          <label className="labe">Select a color to change the text</label>
-          <div
-            onClick={() => setOpen(!open)}
-            className={`ui selection dropdown ${open ? "visible active" : ""}`}
-          >
-            <i className="dropdown icon"></i>
-            <div className="text">{selected.label}</div>
-            <div className={`menu ${open ? "visible transition" : ""}`}>
-              {dropdownItems}
-            </div>
+    <Fragment>
+      <div ref={ref} className="field">
+        <label>{header}</label>
+        <div
+          onClick={() => setOpen(!open)}
+          className={`ui selection dropdown ${open ? "visible active" : ""}`}
+        >
+          <i className="dropdown icon"></i>
+          <div className="text">{selected.label}</div>
+          <div className={`menu ${open ? "visible transition" : ""}`}>
+            {dropdownItems}
           </div>
         </div>
       </div>
-      <div className="text-content">
+      <div className="field text-content">
         <p
           className={`text-${selected.value}`}
         >{`This text is ${selected.value}`}</p>
       </div>
-    </div>
+    </Fragment>
   );
 };
 

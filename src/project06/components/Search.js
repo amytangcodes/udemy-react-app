@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import { Form, List } from "semantic-ui-react";
+import SectionHeader from "../../shared/SectionHeader";
 import axios from "axios";
 
 const SearchComponent = () => {
@@ -55,19 +56,22 @@ const SearchComponent = () => {
   });
 
   return (
-    <div className="section-block">
-      <h2>Search Widget</h2>
-      <Form.Input
-        fluid
-        label="Enter Search Term"
-        type="search"
-        value={term}
-        onChange={(e) => setTerm(e.target.value)}
-      />
-      <List divided relaxed>
-        {renderedResults}
-      </List>
-    </div>
+    <Fragment>
+      <SectionHeader pageHeading="Search Widget" />
+
+      <div className="ui form">
+        <Form.Input
+          fluid
+          label="Enter Search Term"
+          type="search"
+          value={term}
+          onChange={(e) => setTerm(e.target.value)}
+        />
+        <List divided relaxed>
+          {renderedResults}
+        </List>
+      </div>
+    </Fragment>
   );
 };
 

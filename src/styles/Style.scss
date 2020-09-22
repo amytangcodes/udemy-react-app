@@ -1,3 +1,7 @@
+input {
+  margin-top: 15px;
+}
+
 footer {
   background: white;
   position: fixed;
@@ -38,6 +42,21 @@ footer {
 .section-block {
   padding-top: 3em;
   padding-bottom: 3em;
+}
+
+.section-block__small {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.section-block__medium {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+.section-block__large {
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 .column {
@@ -206,8 +225,6 @@ footer {
 // REACT HOOKS | WIDGET APP STYLING
 // --------------------------------------------------
 .text-content {
-  padding-top: 2em;
-  padding-bottom: 2em;
   .text-red {
     color: red;
   }
