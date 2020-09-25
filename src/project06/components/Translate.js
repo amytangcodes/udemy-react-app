@@ -3,8 +3,6 @@ import DropdownComponent from "./Dropdown";
 import ConvertComponent from "./Convert";
 import SectionHeader from "../../shared/SectionHeader";
 
-// const key = "AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM";
-
 const Translate = ({ data, header }) => {
   const [language, setLanguage] = useState(data[0]);
   const [text, setText] = useState("");
@@ -29,10 +27,8 @@ const Translate = ({ data, header }) => {
             header={header}
           />
         </form>
-
-        <hr />
-        <h3 className="ui header">Output</h3>
-        <ConvertComponent text language />
+        <h3 className="ui header">Translated text:</h3>
+        <ConvertComponent text={text} language={language} />
       </div>
     </Fragment>
   );

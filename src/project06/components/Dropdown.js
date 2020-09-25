@@ -51,11 +51,6 @@ const DropdownComponent = ({ data, selected, onSelectedChange, header }) => {
           </div>
         </div>
       </div>
-      <div className="field text-content">
-        <p
-          className={`text-${selected.value}`}
-        >{`This text is ${selected.value}`}</p>
-      </div>
     </Fragment>
   );
 };

@@ -47,6 +47,16 @@ const Index = () => {
                   </div>
                 </div>
               ) : null}
+              <div className="row text-content">
+                <div className="column">
+                  <p>
+                    This text is{" "}
+                    <span className={`text-${selected.value}`}>
+                      {selected.value}
+                    </span>
+                  </p>
+                </div>
+              </div>
             </div>
           </Tab.Pane>
         );
