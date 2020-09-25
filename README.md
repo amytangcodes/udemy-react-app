@@ -13,6 +13,7 @@ https://www.udemy.com/course/react-redux/learn/lecture/12531304#overview
   - [Image Gallery with Search](#image-gallery-with-search)
   - [Video Page with Search](#video-page-with-search)
   - [Understanding React Hooks](#understanding-react-hooks)
+  - [Navigation From Scratch](#navigation-from-scratch)
 - [Other Available Scripts](#other-available-scripts)
 
 ---
@@ -64,6 +65,10 @@ Similar to the Image Gallery, this will be using the Youtube API to pull in a vi
 ### Understanding React Hooks
 
 Creating 4 different widgets using React Hooks `useState` and `useEffect`.
+
+### Navigation From Scratch
+
+Let's build a navigation where we show different sets of components when the URL changes.
 
 ---
 

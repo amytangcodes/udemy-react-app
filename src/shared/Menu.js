@@ -7,8 +7,17 @@ import Project03 from "../project03";
 import Project04 from "../project04";
 import Project05 from "../project05";
 import Project06 from "../project06";
+import Project07 from "../project07";
 
 const panes = [
+  {
+    menuItem: "Navigation Component",
+    render: () => (
+      <Tab.Pane attached="bottom">
+        <Project07 />
+      </Tab.Pane>
+    ),
+  },
   {
     menuItem: "React Hooks | Widgets App",
     render: () => (
