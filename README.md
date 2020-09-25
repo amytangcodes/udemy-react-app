@@ -12,6 +12,7 @@ https://www.udemy.com/course/react-redux/learn/lecture/12531304#overview
   - [Seasons](#seasons)
   - [Image Gallery with Search](#image-gallery-with-search)
   - [Video Page with Search](#video-page-with-search)
+  - [Understanding React Hooks](#understanding-react-hooks)
 - [Other Available Scripts](#other-available-scripts)
 
 ---
@@ -59,6 +60,10 @@ In this project, we learn about handling user inputs with forms and events. We u
 ### Video Page with Search
 
 Similar to the Image Gallery, this will be using the Youtube API to pull in a video detail section and as well as a component displaying a list of videos.
+
+### Understanding React Hooks
+
+Creating 4 different widgets using React Hooks `useState` and `useEffect`.
 
 ---
 
